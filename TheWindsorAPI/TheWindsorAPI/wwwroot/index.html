@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>The Windsor Booking and Payment</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+
+<body>
+    <div id="booking" class="section">
+        <div class="section-center">
+            <div class="container">
+                <div class="row">
+                    <div class="booking-form">
+                        <!--<form id="form1" method="POST" action="javascript:void(0);" onsubmit="addItem()" enctype="application/x-www-form-urlencoded">-->
+                        <form id="form1" method="POST" action="javascript:void(0);" onsubmit="addTransaction()">
+                            <div class="row">
+                                <h1 style="color:white;">^_^</h1>
+                            </div><div class="row">
+                                <h1 style="color:white;">^_^</h1>
+                            </div>
+                            <div class="row">
+                                <h1 style="color:white;">^_^</h1>
+                            </div>
+                            <div class="row">
+                                <h1 style="color:white;">^_^</h1>
+                            </div>
+                            <div class="row">
+                                <h1 style="color:white;">The Windsor Booking Payment</h1>
+                            </div>
+                            <div class="row">
+                                <h2 style="color:white;">Welcome to The Windsor Hotel.</h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <div class="form-group">
+                                        <span class="form-label">Booking Number (Skip this if not available)</span>
+                                        <input id="add-BookingNumber" name="bookingNumber" class="form-control" type="text" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <span class="form-label">First Name</span>
+                                        <input id="add-FirstName" name="firstName" class="form-control" type="text" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <span class="form-label">Last Name</span>
+                                        <input id="add-LastName" name="lastName" class="form-control" type="text" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <span class="form-label">Email (Skip this if you don't have an Email or don't want to receive receipt in Email.)</span>
+                                        <input id="add-Email" name="email" class="form-control" type="text" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <span class="form-label">Phone Number</span>
+                                        <input id="add-PhoneNumber" name="phoneNumber" class="form-control" type="text" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <span class="form-label">PAYMENT AMOUNT</span>
+                                        <input id="add-Amount" name="amount" class="form-control" type="text" placeholder="$" onkeyup="amountModify(this.form.elements['total'], this);">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <p style="color:white;">Type "0" for Airbnb Guests or if already paid.</p>
+                                    <p style="color:white;">(Note: 1% credit card surcharge will be added.)</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <span class="form-label">TOTAL</span>
+                                        <input id="add-Total" name="total" class="form-control" type="text" placeholder="$" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-btn">
+                                        <!--<button class="submit-btn">Pay Now</button>-->
+                                        <input class="submit-btn" type="submit" value="Pay Now" />
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-btn">
+                                        <button type="button" onclick="cancelTransaction()" class="submit-btn">Cancel Transaction</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <p style="color:white;">You can also press the yellow button on the card reader to cancel the transaction anytime.</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/booking_payment.js" asp-append-version="true"></script>
+    <!--<script type="text/javascript">
+        getItems();
+    </script>-->
+    <!--<script type="text/javascript">
+    $("#form1").submit(function () {
+        var jqxhr = $.post('https://pi7498tb12b3sd1h9w9r8y4g6a51ger7h6i4s21vbba6g4er99hg.azurewebsites.net/api/transactions', $('#form1').serialize())
+            .success(function () {
+                var loc = jqxhr.getResponseHeader('Location');
+                var a = $('<a/>', { href: loc, text: loc });
+                //alert("Thank you! Please proceed the payment by presenting your card to the card reader on the table.");
+                //window.location.href = 'https://website.com/my-account';
+                //window.location.replace("/deposit.html");
+            })
+            .error(function () {
+                alert("Error posting the update.");
+            });
+        return false;
+    });
+    </script>-->
+</body>
+
+</html>

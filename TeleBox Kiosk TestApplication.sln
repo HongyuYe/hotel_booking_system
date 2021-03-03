@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeleBox Kiosk TestApplication", "TeleBox Kiosk TestApplication.csproj", "{70C080B7-55DF-4FD9-91E2-CA170416BE21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70C080B7-55DF-4FD9-91E2-CA170416BE21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70C080B7-55DF-4FD9-91E2-CA170416BE21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70C080B7-55DF-4FD9-91E2-CA170416BE21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70C080B7-55DF-4FD9-91E2-CA170416BE21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9C3A67D-E363-4276-A80C-B6C6AE251F85}
+	EndGlobalSection
+EndGlobal
