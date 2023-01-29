@@ -31,7 +31,7 @@ A booking system connected with EFPOS payment system.
 The guest who enters the hotel can type in their details of booking on a web page(or someone else can enter the details for the guest remotely) and pay with an EFPOS machine which is connected with the Windows system.
 
 1.2Technology and Development Tools
-Developed with Microsoft Visual Studio 2019, using C#, Javascript, HTML. 
+Developed with Microsoft Visual Studio 2019, Azure, using C#, Javascript, HTML. 
 
 
 
