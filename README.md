@@ -1,4 +1,4 @@
-# booking_system
+# hotel_booking_system
 The guest who enters the hotel can type in their details of booking on a web page on a screen or on their own device (or someone else can enter the details for the guest remotely) and pay with an EFPOS machine which is connected with the Windows system. The system needs to confirm the payment and generate the receipts, also to inform both parties by emails. The admin can manage refund and pre-authorised payment. It is developed with Microsoft Visual Studio, Azure, using C#, .Net, Javascript, HTML and comes with a Web API which handles the backend data communications between the web page, the server, EFPOS machine and the windows  program. The data is sent back and forth to verify the payments and generate the receipts and emails. In the cases when the payment is unsuccessful like, declined, card is not detected, the web page will prompt the guest to try again. 
 
 System Description For Windsor Payment System
